@@ -1,10 +1,12 @@
+import { createRoot } from 'react-dom/client'; // Importa createRoot desde react-dom/client
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App.jsx';
-import './index.css';
+import App from './App';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const root = document.getElementById('root');
+const rootElement = (
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
 );
+
+createRoot(root).render(rootElement);
